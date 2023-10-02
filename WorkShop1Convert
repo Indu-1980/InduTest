@@ -1,0 +1,41 @@
+ const util = require( "util" ) ;
+ 
+ const readline = require('readline').createInterface({
+    input: process.stdin,
+    output: process.stdout
+  });
+
+ /* let mile;
+  const km=1.6;
+  let display;
+  readline.question('This program converts mile to Kilometers. Please give distance in miles :', mile =>{
+display=mile*km;
+process.stdout.write(util.format("%d mile is %d Kilometers.",mile,display.toFixed(2)));
+readline.close();
+  })*/
+  let meters,display;
+  const km=0.001;
+  const miles=0.0006;
+  const yards=1.09;
+  const feet=3.28;
+  const inchers=39.37;
+  const lightYears=1.057e-16;
+
+  readline.question('This program converts meters in to othe units of distance. Please enter distance in meters :', meters =>{
+    display=meters*km;
+
+    process.stdout.write(util.format("%d meters is :\n",meters));
+   
+    process.stdout.write(util.format("\n%d Kilometers ",display.toFixed(3)));
+    display=meters*miles;
+    process.stdout.write(util.format("\n%d miles ",display.toFixed(3)));
+    display=meters*yards;
+    process.stdout.write(util.format("\n%d Yards ",display.toFixed(3)));
+    display=meters*feet;
+    process.stdout.write(util.format("\n%d Feets ",display.toFixed(3)));
+    display=meters*inchers;
+    process.stdout.write(util.format("\n%d Inchers ",display.toFixed(3)));
+    display=meters*lightYears;
+    process.stdout.write(util.format("\n%d Light Years ",display.toFixed(3)));
+    readline.close();
+      });

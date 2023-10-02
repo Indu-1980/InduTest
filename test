@@ -1,0 +1,13 @@
+process.stdout.write("please enter distance :");
+process.stdin.on("data",function(inputputdistance)
+{
+  let miles=inputputdistance;
+  let miletokilo=miles*1.6093;
+ // process.stdout.write(+ miles+"\nmiles is "+ miletokilo+"km1.");
+ const util=require('util');
+  process.stdout.write(util.format("\n%d miles is %d Kilometers ",miles,miletokilo.toFixed(2)));
+ 
+ // process.stdout.write(util.format(miles+ "mile is"+miletokilo.toFixed(2)+ "km."));
+  process.exit();
+});
+

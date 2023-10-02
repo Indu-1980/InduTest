@@ -1,0 +1,43 @@
+const util = require( "util" ) ;
+ 
+ 
+  let secreatNo=40;
+  let userNo;
+  let tot;
+  process.stdout.write("Please enter a number: ");
+  process.stdin.on("data",function(inputFromUser){
+    userNo=Number(inputFromUser);
+    tot=secreatNo+Number(userNo);
+    process.stdout.write(util.format("%d + %d =%d",secreatNo,userNo,tot.toFixed(2)))
+    tot=Number(secreatNo)-Number(userNo);
+    process.stdout.write(util.format("\n%d - %d =%d",secreatNo,userNo,tot.toFixed(2)))
+    tot=Number(secreatNo)*Number(userNo);
+    process.stdout.write(util.format("\n%d * %d =%d",secreatNo,userNo,tot.toFixed(2)))
+    tot=Number(secreatNo)/Number(userNo);
+    process.stdout.write(util.format("\n%d / %d =%d",secreatNo,userNo,tot.toFixed(2)))
+    tot=Number(secreatNo)%Number(userNo);
+    process.stdout.write(util.format("\n%d % %d =%d",secreatNo,userNo,tot.toFixed(2)))
+    tot=Number(userNo)++;
+    process.stdout.write(util.format("\n%d ++ =%d",userNo,tot))
+    tot=Number(tot)--;
+    process.stdout.write(util.format("\n%d -- =%d",tot,tot))
+    process.exit();
+  });
+/*readline.question('Please enter a number : ',userNo =>{ 
+    tot=Number(secreatNo)+Number(userNo);
+    process.stdout.write(util.format("%d + %d =%d",secreatNo,userNo,tot))
+    tot=Number(secreatNo)-Number(userNo);
+    process.stdout.write(util.format("\n%d - %d =%d",secreatNo,userNo,tot))
+    tot=Number(secreatNo)*Number(userNo);
+    process.stdout.write(util.format("\n%d * %d =%d",secreatNo,userNo,tot))
+    tot=Number(secreatNo)/Number(userNo);
+    process.stdout.write(util.format("\n%d / %d =%d",secreatNo,userNo,tot))
+    tot=Number(secreatNo)%Number(userNo);
+    process.stdout.write(util.format("\n%d % %d =%d",secreatNo,userNo,tot))
+    tot=Number(userNo)++;
+    process.stdout.write(util.format("\n%d ++ =%d",userNo,tot))
+    tot=Number(tot)--;
+    process.stdout.write(util.format("\n%d -- =%d",tot,tot))
+
+    readline.close();
+})*/

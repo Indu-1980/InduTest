@@ -1,0 +1,23 @@
+ const util = require( "util" ) ;
+ let no1  =1;
+ let no2;
+
+ 
+ const readline = require('readline').createInterface({
+    input: process.stdin,
+    output: process.stdout
+  });
+  
+  readline.question('This programis a omputer game. Please type in a number ', no2 => {
+    process.stdout.write(util.format("\nyou type in: %d",no2));
+    process.stdout.write(util.format("\nMy number is : %d",no1));
+   // console.log(`\nYou type in ${no2}`);
+   //console.log(`My number is ${no1}`);
+    if (no1!=no2)
+  {console.log("\nSorry your lose. I won. The game is over.");}
+  else{console.log("\nYou Won");}
+    readline.close();
+    
+    
+   
+});

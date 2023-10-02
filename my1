@@ -1,0 +1,19 @@
+const util = require( "util" ) ;
+//let name;
+ 
+/* const readline = require('readline').createInterface({
+    input: process.stdin,
+    output: process.stdout
+  });*/
+//readline.question('Please enter Name :', name =>{ greeting (name)})
+process.stdout.write("please enter your name: ");
+process.stdin.on("data",function(inputFromUser){
+  process.stdout.write("Hello "+ inputFromUser);
+});
+
+/*function greeting (name) {(
+    // Your code goes here
+    console.log("Hello "+name));
+    
+}*/
+    

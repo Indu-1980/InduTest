@@ -1,0 +1,39 @@
+const NUMBER_OF_SAUSAGES_PER_PERSON = 3;
+const NUMBER_OF_Drinks_PER_PERSON = 5;
+const NUMBER_OF_Tomatos_PER_PERSON = 2;
+const NUMBER_OF_Eggs_PER_PERSON = 1;
+
+let display1,display2,display3,display4;
+let numberOfGuests;
+
+const util = require( "util" ) ;
+ 
+ const readline = require('readline').createInterface({
+    input: process.stdin,
+    output: process.stdout
+  });
+
+// Define constants here
+
+function shoppingList(numberOfGuests) {
+    // Your code goes here
+display1=numberOfGuests*NUMBER_OF_SAUSAGES_PER_PERSON;
+
+display2=numberOfGuests*NUMBER_OF_Drinks_PER_PERSON;
+
+display3=numberOfGuests*NUMBER_OF_Tomatos_PER_PERSON ;
+
+display4=numberOfGuests*NUMBER_OF_Eggs_PER_PERSON ;
+}
+
+readline.question('Please enter Number of Guests :', numberOfGuests =>{
+    shoppingList(numberOfGuests);
+    console.log("* "+display1 +" sausages");
+    
+    console.log("* "+display1 +" sausages");
+    console.log("* "+display2 +" drinks");
+    console.log("* "+display3 +" tomatoes");
+    console.log("* "+display4 +" eggs");
+    
+})
+

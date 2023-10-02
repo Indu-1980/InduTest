@@ -1,0 +1,33 @@
+const util = require( "util" ) ;
+
+let givenInputstring,givenInput1;
+//console.log(givenInput);
+//Ask theuser to enter number
+
+
+process.stdin.on( "data", function( inputFromUser )
+{
+givenInputstring =inputFromUser;
+process.stdout.write(givenInputstring);
+givenInput1=String(givenInputstring).split(" ");
+process.stdout.write(givenInput1[0]);
+} ) ;
+
+function GetNumber(number1,number2,calculation)
+{
+    let cal=number1+calculation+number2;
+    
+}
+
+/*calculation function
+function CheckNumber(number1)
+{
+    if (number1 == 0 )
+    {
+        console.log("You entered a Zero");
+    }
+    else
+    {
+        console.log("You entered something else");
+    }
+}*/
